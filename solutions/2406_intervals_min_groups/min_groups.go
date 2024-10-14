@@ -2,7 +2,7 @@ package min_groups
 
 import (
 	"container/heap"
-	"leetcode/data_structure"
+	"leetcode/data_structure/heaps"
 	"sort"
 )
 
@@ -12,7 +12,7 @@ func minGroups(intervals [][]int) int {
 		return intervals[i][0] < intervals[j][0]
 	})
 
-	groups := &data_structure.MinHeap{}
+	groups := &heaps.MinHeap{}
 	heap.Init(groups)
 
 	for i := 0; i < len(intervals); i++ {

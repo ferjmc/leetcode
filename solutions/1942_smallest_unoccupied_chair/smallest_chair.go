@@ -3,7 +3,7 @@ package smallest
 import (
 	"container/heap"
 	"fmt"
-	"leetcode/data_structure"
+	"leetcode/data_structure/heaps"
 	"sort"
 )
 
@@ -39,7 +39,7 @@ func smallestChair(times [][]int, targetFriend int) int {
 
 	chairsByFriend := make(map[int]int, n)
 
-	freeChairHeap := &data_structure.MinHeap{}
+	freeChairHeap := &heaps.MinHeap{}
 	heap.Init(freeChairHeap)
 
 	chairNumber := 0
